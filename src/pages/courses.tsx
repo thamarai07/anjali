@@ -24,7 +24,7 @@ export default function Courses() {
   </Head>
 
   <MainLayout>
-    <div className='lg:max-w-[1200px] m-auto px-10 '>
+    <div className='lg:max-w-[1200px] m-auto lg:px-10 '>
         <CourseHero CourseContent={CourseContent}/>
         <IdealFor CourseContent={CourseContent}/>
         <CourseForm CourseContent={CourseContent}/>

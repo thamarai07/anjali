@@ -6,10 +6,10 @@ import InnerCoursesTrend from '../InnerCourseTrandingS'
 function CourseForm({CourseContent}: CourseContentTypeing) {
   return (
     <>
-    <div className='mt-10'>
+    <div className='mt-10 lg:px-0 px-4'>
     <h2 className='text-3xl font-semibold'>Course Overview</h2>
-    <div className='flex mt-4 gap-24' >
-        <div className='w-[60%]'>
+    <div className='lg:flex mt-4 gap-24' >
+        <div className='lg:w-[60%]'>
             <p className='font-medium text-[18px]'>
         {
             CourseContent.Introduction
@@ -17,7 +17,7 @@ function CourseForm({CourseContent}: CourseContentTypeing) {
           <InnerCoursesTrend/>
         
         </div>
-        <div className='w-[40%]'>
+        <div className='lg:w-[40%] lg:mt-0 mt-8'>
             <Form/>
         </div>
     </div>
