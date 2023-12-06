@@ -1,4 +1,3 @@
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useState } from "react";
 import MegaMenu from "./mega-menu";
@@ -12,8 +11,8 @@ const NavLinkMobile = ({
     index,
     activeIndex,
     setActiveIndex,
-}) => {
-    const handleSetIndex = (index) =>
+} : any) => {
+    const handleSetIndex = (index : any) =>
         activeIndex !== index ? setActiveIndex(index) : setActiveIndex(-1);
     return (
         <>
@@ -29,11 +28,11 @@ const NavLinkMobile = ({
                         onClick={() => handleSetIndex(index)}
                     >
                         <span className="px-2">{title}</span>
-                        {activeIndex !== index ? (
+                        {/* {activeIndex !== index ? (
                             <ChevronDownIcon className="w-6 h-6 mr-2" />
                         ) : (
                             <ChevronUpIcon className="w-6 h-6 mr-2 text-white" />
-                        )}
+                        )} */}
                     </a>
                     {activeIndex === index && (
                         <MegaMenu title={title} megaMenuLinks={megaMenuLinks} />
