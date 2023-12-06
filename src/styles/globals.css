@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slider-course {
+    display: flex !important;
+    gap: 40px;
+}
+
+.titleMain {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.title {
+    font-size: 30px;
+    color: rgb(0, 109, 36);
+    font-weight: 700;
+}
+
+.titleTwo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.KnowMoreBtn {
+    border-radius: 5px;
+    margin-top: 20px;
+    background: rgb(21, 127, 240);
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.shadowBox{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
