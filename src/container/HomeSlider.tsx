@@ -26,12 +26,12 @@ const SimpleSlider = () => {
                 <Image src={values.img} alt={values.title} width={600} className=" lg:p-10 p-5 rounded"  height={300}/>
             </div>
             <div className="m-auto">
-              <div className="lg:flex gap-52 items-center">
-                <p className="titleMain">{values.title}</p>
-                <Image src={"/ISO-certification-scaled.webp"} width={80} height={80} alt="iso-certificate"/>
+              <div className="flex lg:gap-32 gap-10 items-center">
+                <p className="titleMain lg:text-[44px] text-[20px]">{values.title}</p>
+                <Image src={"/ISO-certification-scaled.webp"} width={80} height={80} alt="iso-certificate" className="lg:w-[80px] w-[60px]"/>
               </div>
-                <p className="title">{values.sub}</p>
-                <p className="titleTwo ">{values.subTwo}</p>
+                <p className="text-green-600 font-extrabold lg:text-[34px] text-[24px]">{values.sub}</p>
+                <p className="lg:text-[25px] text-[18px] font-semibold">{values.subTwo}</p>
                 <button className="KnowMoreBtn ">Know more</button>
             </div>
         </div>
