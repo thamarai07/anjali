@@ -4,10 +4,6 @@ import { LuBookCopy } from "react-icons/lu";
 import { FaUserGraduate } from "react-icons/fa";
 import { GiGraduateCap } from "react-icons/gi";
 import { CiTrophy } from "react-icons/ci";
-import { GlobalIncrement } from "@/funcitons/GlobalLocationsIncreament";
-import {StudentCountIncrement}  from "@/funcitons/StudentCount";
-import {QualifiedTeacher}  from "@/funcitons/QualifiedTeacher";
-import {Awards}  from "@/funcitons/Awards";
 
 interface AnjaliStatsProps {}
 
@@ -28,10 +24,6 @@ const AnjaliStats: FC<AnjaliStatsProps> = ({}) => {
     starting: 276,
     speed: 30,
   };
-  const { GlobalNumber } = GlobalIncrement(GlobalValues);
-  const { StudentCount } = StudentCountIncrement(StudentCountValues);
-  const { QualifiedTeacherCount } = QualifiedTeacher(QualifiedTeacherValues);
-  const { AwardsCount } = Awards(AwardsValues);
 
   return (
     <>
