@@ -4,7 +4,7 @@ import MegaMenu from "./mega-menu";
 import Image from "next/image";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, TestLinksContents, className, id,Show }) => {
+const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, TestLinksContents, className, id,Show } : any) => {
     const [isMegaMenuShown, setIsMegaMenuShown] = useState(false);
     const [ShowingIndex, setShowingIndex] = useState(0);
     const [DropDown, showDropDown] = useState(false);
@@ -12,7 +12,7 @@ const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, Test
     const [ArrowTouched, setArrowTouched] = useState(false);
     const [Hover, setHover] = useState(false);
 
-    const handleTitleIndex = useCallback((data) => {
+    const handleTitleIndex = useCallback((data : any) => {
         setShowingIndex(data);
         setArrowTouched((pre) => !pre);
     }, []);
@@ -24,7 +24,7 @@ const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, Test
         }
     }, [DropDown]);
 
-    const HandleNavShowParent = useCallback((data) => {
+    const HandleNavShowParent = useCallback((data : any) => {
         setHover(data);
     }, []);
 
@@ -49,7 +49,7 @@ const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, Test
                     </div>
                     {DropDown && (
                         <div className={"lg:hidden block drop-down-menu-items" + " " + `${DropDown === true ? "droped" : ""}`}>
-                            {ContentMegaLink.map((value, indexs) => (
+                            {ContentMegaLink.map((value : any, indexs: any) => (
                                 <div key={indexs} className="text-[18px] lg:hidden block lg:px-0 px-4 lg:py-0 py-1 lg:mt-0 mt-0 lg:mb-0  menu-items-down">
                                     <div className="lg:font-bold lg:block hidden font-semibold">{value.Content} </div>
 
@@ -58,10 +58,10 @@ const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, Test
                                         <div className={"arrow-bottom"}>{ArrowTouched == true ? <MdKeyboardArrowDown /> : <MdKeyboardArrowDown />}</div>
                                     </div>
 
-                                    {TestLinksContents.map((valuess) => (
+                                    {TestLinksContents.map((valuess : any) => (
                                         <>
                                             <div className="lg:block hidden">
-                                                {valuess.Content.map((val, index) => (
+                                                {valuess.Content.map((val : any, index : any) => (
                                                     <div className="grid" key={index}>
                                                         {val.Title}
                                                     </div>
@@ -69,10 +69,10 @@ const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, Test
                                             </div>
 
                                             <div className="lg:hidden block ">
-                                                {valuess.Content.map((val, index) => (
+                                                {valuess.Content.map((val : any, index : any) => (
                                                     <>
                                                         {ShowingIndex === value.id && valuess.id === ShowingIndex  ? (
-                                                            <Link href={"/course/" + val.slug} onClick={()=>Show(pre => !pre)}>
+                                                            <Link href={"/course/" + val.slug} onClick={()=>Show((pre: any) => !pre)}>
                                                                 <div className="p-1 grid items-center">
                                                                     <div className="flex items-center gap-4 ">
                                                                         <Image src={val.image} height={100} width={25} className=" align-center"  alt="one"/>

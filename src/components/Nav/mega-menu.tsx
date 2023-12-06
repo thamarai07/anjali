@@ -1,7 +1,7 @@
 import React, { useState ,useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-const MegaMenu = ({ title, className, megaMenuLinks ,ContentMegaLink,TestLinksContents , HandleNavShowParent}) => {
+const MegaMenu = ({ title, className, megaMenuLinks ,ContentMegaLink,TestLinksContents , HandleNavShowParent} : any ) => {
 
   const [TitleIndex , getTitleIndex] = useState(1);
 
@@ -16,7 +16,7 @@ const MegaMenu = ({ title, className, megaMenuLinks ,ContentMegaLink,TestLinksCo
       <div className=' lg:px-4 lg:py-10  '>
         <p className='font-light text-[18px] lg:block hidden'>Course Categories </p>
         <div className=''>{
-          megaMenuLinks.map((values,index)=>(
+          megaMenuLinks.map((values : any,index : any)=>(
             <>
             <div className='lg:block hidden' key={index}>
             <p className=' group transition-all duration-300 ease-in-out cursor-pointer text-[#1E1E1E] hover:text-black text-[15px] font-normal '>

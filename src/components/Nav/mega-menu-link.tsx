@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/outline';
+// import { ArrowRightIcon } from '@heroicons/react/outline';
 
-function MegaMenuLink({ title, href, image, isSectionTitle }) {
+function MegaMenuLink({ title, href, image, isSectionTitle } : any) {
   return isSectionTitle ? (
     <span className='flex flex-col'>
       <span className='m-1 title-menu-font text-sm border p-1 mt-3'>
@@ -24,7 +24,7 @@ function MegaMenuLink({ title, href, image, isSectionTitle }) {
       className='p-1 text-sm hover:bg-theme-red hover:text-white flex justify-between items-center submenu-list'
     >
       <span>{title }{title ===  "Python for professionals" ? <span id="demo" >NEW</span> : ""}</span>
-      <ArrowRightIcon className='w-4 h-4 font-bold text-white' />
+      {/* <ArrowRightIcon className='w-4 h-4 font-bold text-white' /> */}
     </a>
   );
 }
