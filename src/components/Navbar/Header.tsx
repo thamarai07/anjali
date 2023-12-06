@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import NavLink from "../../components/nav/nav-link";
-// import { navLinks, TestLinks, TestLinksContent, TestLinksContents } from "../../utils/links";
 import {navLinks,TestLinks,TestLinksContent,TestLinksContents} from "../../../utils/links"
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
