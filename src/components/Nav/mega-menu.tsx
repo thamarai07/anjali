@@ -11,21 +11,22 @@ const MegaMenu = ({ title, className, megaMenuLinks ,ContentMegaLink,TestLinksCo
 
   return (
     <>
-    <div className='  container mx-auto w-full lg:mt-0 mt-3 bg-white '  onMouseEnter={()=>HandleNavShowParent(true)
+    <div className='  container mx-auto w-full lg:mt-0 mt-3 bg-white left-0'  onMouseEnter={()=>HandleNavShowParent(true)
 }onMouseLeave={()=>HandleNavShowParent(false)}>
       <div className=' lg:px-4 lg:py-10  '>
-        <p className='font-light text-[18px] lg:block hidden'>Course Categories </p>
-        <div className=''>{
+        <div className='lg:flex gap-10'>{
           megaMenuLinks.map((values : any,index : any)=>(
             <>
             <div className='lg:block hidden' key={index}>
-            <p className=' group transition-all duration-300 ease-in-out cursor-pointer text-[#1E1E1E] hover:text-black text-[15px] font-normal '>
-              
-              <span className={`bg-left-bottom bg-gradient-to-r from-[#ED1C24] to-[#ED1C24] bg-[length:0%_2px] bg-mb-10 bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out text-[#000] font-medium`}>
-              {values.Title}
-              </span>
-            </p>
+              <div className='flex gap-4 justify-center items-center bg-white hover:bg-green-400 text-black  hover:text-white p-3 rounded-lg'>
+                <Link className='text-[20px] font-bold ' href={values.href}>{values.Title}</Link>
+                <div className='text-gray-500'>
+                {values.icons}
+                </div>
+              </div>
             </div>
+            {megaMenuLinks.length - 1 != index  && <span className='p-[0.5px] bg-gray-400'> </span> }
+
             </>
           ))
           }</div>

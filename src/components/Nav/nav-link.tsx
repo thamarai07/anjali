@@ -93,7 +93,7 @@ const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, Test
                         </div>
                     )}
                 </div>
-                <div className={`sm:mb-0 mega-menu absolute`} onMouseOver={() => setIsMegaMenuShown(true)} onMouseOut={() => setIsMegaMenuShown(false)}>
+                <div className={`sm:mb-0 mega-menu absolute left-[25%] top-24`} onMouseOver={() => setIsMegaMenuShown(true)} onMouseOut={() => setIsMegaMenuShown(false)}>
                     {
                         Hover && 
                     <MegaMenu title={Title} megaMenuLinks={megaMenuLinks} ContentMegaLink={ContentMegaLink} TestLinksContents={TestLinksContents} HandleNavShowParent={HandleNavShowParent} />
@@ -105,17 +105,9 @@ const NavLink = ({ title, href, isMegaMenu, megaMenuLinks, ContentMegaLink, Test
             </div>
         </>
     ) : (
-        <div className={`lg:w-[100%] w-[90%] m-auto lg:border-0  font-semibold ${Title !== "Locate Us" && "border-b-2 border-dashed border-red-600  "} lg:px-0 px-3 lg:py-0 py-3`}>
-               {id<5 &&  
-            <Link href={href} className="lg:mx-10 mx-1 lg:text-[14px] text-[15px] lg:font-semibold lg:block hidden w-[70px]">
-               {
-                Title
-               }
-            </Link>}
-            <Link href={href} className="lg:mx-10 mx-1 lg:text-[15px] text-[15px] lg:font-semibold lg:hidden block">
-                {Title}
-            </Link>
-        </div>
+        
+        <>
+        </>
     );
 };
 

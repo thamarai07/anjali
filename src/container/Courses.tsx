@@ -21,109 +21,47 @@ function Courses() {
     const [Hover,setHover] = useState(false)
     console.log(Hover)
     const Course = [
-        {
-            id : 1,
-            course : "Data science",
-            herf : "#"
-        },
-        {
-            id : 2,
-            course : "Tally Prime",
-            herf : "#"
-
-        },
-        {
-            id : 3,
-            course : "SAP",
-            herf : "#"
-
-        },
-        {
-            id : 4,
-            course : "CCNA",
-            herf : "#"
-
-        },
-        {
-            id : 5,
-            course : "ANGULAR JS",
-            herf : "#"
-
-        },
-        {
-            id : 6,
-            course : "MS OFFICE",
-            herf : "#"
-
-        },
+        
+       
         {
             id : 7,
             course : "C, C++",
-            herf : "#"
+            herf : "#",
+            thumpnail : "/courseimages/c_c++/c1.avif",
+            content : "Unlock the power of programming with C and C++, where innovation meets efficiency in the world of code!",
+
 
         },
         {
             id : 8,
             course : "JAVA",
-            herf : "#"
-
+            herf : "#",
+            thumpnail : "/courseimages/java/java1.avif",
+            content : "Dive into the world of endless possibilities with Java programming – where your dreams of digital brilliance come to life!"
         },
-        {
-            id : 9,
-            course : ".NET",
-            herf : "#"
-
-        },
-        {
-            id : 10,
-            course : "MS MYSQL",
-            herf : "#"
-
-        },
-        {
-            id : 11,
-            course : "PHP WITH MYSQL",
-            herf : "#"
-
-        }
-        ,
         {
             id : 12,
             course : "PYTHON",
-            herf : "#"
+            herf : "#",
+            thumpnail : "/courseimages/python/python01=2.avif",
+            content : "Unlock the power of programming with Python: Where simplicity meets versatility!"
 
         },
         {
-            id : 13,
-            course : "MULTIMEDIA",
-            herf : "#"
-
-        },
-        {
-            id : 14,
-            course : "CLOUD ACCOUNTING",
-            herf : "#"
-
-        },
-        {
-            id : 15,
-            course : "HARDWARE NETWORKING",
-            herf : "#"
-
-        },
-        {
-            id : 16,
-            course : "AUTOCAD",
-            herf : "#"
-
+            id : 5,
+            course : "ANGULAR JS",
+            herf : "#",
+            content : "Unlock the power of dynamic web applications with AngularJS – where innovation meets seamless user experiences!",
+            thumpnail : "/courseimages/angularjs/angularjs.jpg",
         }
+       
     ]
   return (
     <>
     <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 mt-16'>
             Our Courses <span className={`text-[20px] ${Hover == true && "text-red-500"}`}>(ISO Certified)</span>
           </p>
-    <div className='flex justify-center flex-wrap px-4 ' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+            {/* <div className='flex justify-center flex-wrap px-4 ' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
         {
             Course.map((values)=>(
                 <>
@@ -152,6 +90,23 @@ function Courses() {
                 </>
             ))
         }
+    </div> */}
+    <div className='flex lg:flex-row flex-col justify-center items-center gap-10 w-[100%]'>
+
+    {
+        Course.map((values)=>(
+            <>
+            <div className='border rounded-[20px] w-[240px]'>
+                    <Image src={values.thumpnail} width={300} height={120} alt={values.course} className='rounded-t-md'/>
+                    <div className='px-4 mt-4'>
+                    <p className='text-[24px] pt-4 font-extrabold text-green-500 '>{values.course}</p>
+                    <p className='text-[14px] mt-4 h-[80px]'>{values.content}</p>
+                    </div>
+                    <Link href={values.herf} className='bg-blue-500 hover:bg-green-500 text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-4 w-[50%] rounded mb-6'>KnowMore</Link>
+            </div>
+            </>
+        ))
+    }
     </div>
     </>
   )

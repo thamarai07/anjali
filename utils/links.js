@@ -1,3 +1,19 @@
+import { GiMaterialsScience } from "react-icons/gi";
+import { TbTallymarks } from "react-icons/tb";
+import { SiSap } from "react-icons/si";
+import { FaNetworkWired } from "react-icons/fa";
+import { FaAngular } from "react-icons/fa";
+import { SiMicrosoftoffice } from "react-icons/si";
+import { SiCplusplus } from "react-icons/si";
+import { FaJava } from "react-icons/fa6";
+import { DiDotnet } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
+import { SiPhp , } from "react-icons/si";
+import { SiPython } from "react-icons/si";
+import { GrMultimedia } from "react-icons/gr";
+import { GrCloudComputer } from "react-icons/gr";
+import { IoHardwareChip } from "react-icons/io5";
+
 export const navLinks = [
     
     {
@@ -19,12 +35,6 @@ export const navLinks = [
         isMegaMenu :  false
     },
   
-    {
-        id : 4,
-        title : "Franchise",
-        href : "/franchise",
-        isMegaMenu :  false
-    },
     
     {
         id : 4,
@@ -39,7 +49,59 @@ export const navLinks = [
 export const TestLinks =[
     {
         id: 1,
-        Title  : "asdf"
+        Title  : "C, C++",
+        href: "c_c_plus_plus",
+        icons : <SiCplusplus size={40} />
+
+    },
+    {
+        id: 2,
+        Title  : "Java",
+        href: "java",
+        icons : <FaJava size={40}/>
+
+    },
+    {
+        id: 3,
+        Title  : "Python",
+        href :"python",
+        icons : <SiPython size={40}/>
+    },
+    {
+        id: 4,
+        Title  : "AngularJs",
+        href : "AngularJs",
+        icons : <FaAngular size={40}/>
+    }
+]
+
+
+export const TestLinks2=[
+    {
+        id: 1,
+        Title  : "C, C++",
+        href: "c_c_plus_plus",
+        icons : <SiCplusplus size={20} />
+
+    },
+    {
+        id: 2,
+        Title  : "Java",
+        href: "java",
+        icons : <FaJava size={20}/>
+
+    },
+    {
+        id: 3,
+        Title  : "Python",
+        href :"python",
+        icons : <SiPython size={20}/>
+    },
+    {
+        id: 4,
+        Title  : "AngularJs",
+        href : "AngularJs",
+        icons : <FaAngular size={20}/>
     }
 ]
 

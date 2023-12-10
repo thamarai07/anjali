@@ -5,6 +5,7 @@ import Unic from '@/container/Unic';
 import AnjaliStats from '@/container/AnjaliStats';
 import Courses from '@/container/Courses';
 import Testimonial from '@/container/Testimonial';
+import Certificate from '@/container/Certificate';
 export default function Home() {
   return (
     <>
@@ -28,6 +29,7 @@ export default function Home() {
           <HomeSlider />
           
           <Courses/>
+          <Certificate/>
           {/* <Content/> */}
           <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10'>
           

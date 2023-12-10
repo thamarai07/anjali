@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import NavLink from "../Nav/nav-link";
-import {navLinks,TestLinks,TestLinksContent,TestLinksContents} from "../../../utils/links"
+import {navLinks,TestLinks,TestLinks2,TestLinksContent,TestLinksContents} from "../../../utils/links"
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
 
@@ -97,20 +97,24 @@ const Header = () => {
                                 <div className="absolute top-16 right-0 z-50 w-[100%]">
                                     <div className="bg-white border rounded shadow-sm">
                                         <div className="lg:mb-4 mb-10">
-                                            <div id="navLinks" className="grid grid-flow-row ">
+                                            <div id="navLinks" className="grid grid-flow-row mt-10">
                                                 {navLinks.map((link : any, index : any) => (
-                                                    <NavLink
-                                                        title={link.title}
-                                                        href={link.href}
-                                                        key={index}
-                                                        id={link.id}
-                                                        className={router.pathname == link.href ? `text-theme-red font-bold border-b-2 border-b-theme-red ` : ""}
-                                                        isMegaMenu={link.isMegaMenu}
-                                                        megaMenuLinks={TestLinks}
-                                                        ContentMegaLink={TestLinksContent}
-                                                        TestLinksContents={TestLinksContents}
-                                                        Show={Show}
-                                                    />
+                                                    <>
+                                                        <span key={index} className="text-black px-8 py-2">
+                                                            {link.title}
+                                                           
+                                                        </span>
+                                                        {
+                                                            link.id == 3 && 
+                                                            <div className=" flex flex-col px-12 ">
+                                                            {
+                                                                TestLinks2.map((values)=>(
+                                                                    <span key={values.id} className="text-black p-1 flex gap-10 items-center font-semibold">{values.Title} <span>{values.icons}</span></span>
+                                                                ))
+                                                            }
+                                                            </div>
+                                                        }
+                                                        </>
                                                 ))}
                                             </div>
                                         </div>
