@@ -19,7 +19,8 @@ import Image from 'next/image';
 function Courses() {
 
     const [Hover,setHover] = useState(false)
-    console.log(Hover)
+    const [CourseId,setCourseId] = useState<number>();
+
     const Course = [
         
        
@@ -56,6 +57,11 @@ function Courses() {
         }
        
     ]
+
+    const handleCourseCard = (id : number) =>{
+        setCourseId(id);
+        setHover(true)
+    }
   return (
     <>
     <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 mt-16'>
@@ -91,18 +97,18 @@ function Courses() {
             ))
         }
     </div> */}
-    <div className='flex lg:flex-row flex-col justify-center items-center gap-10 w-[100%]'>
+    <div className='flex lg:flex-row flex-col justify-center items-center gap-4 w-[100%]'>
 
     {
         Course.map((values)=>(
             <>
-            <div className='border rounded-[20px] w-[240px]'>
+            <div className='border rounded-[20px] w-[280px]' onMouseEnter={()=>handleCourseCard(values.id)}>
                     <Image src={values.thumpnail} width={300} height={120} alt={values.course} className='rounded-t-md'/>
                     <div className='px-4 mt-4'>
                     <p className='text-[24px] pt-4 font-extrabold text-green-500 '>{values.course}</p>
-                    <p className='text-[14px] mt-4 h-[80px]'>{values.content}</p>
+                    <p className='text-[15px] mt-4 h-[80px] font-medium'>{values.content}</p>
                     </div>
-                    <Link href={values.herf} className='bg-blue-500 hover:bg-green-500 text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-4 w-[50%] rounded mb-6'>KnowMore</Link>
+                    <Link href={values.herf} className='bg-blue-500 hover:bg-green-500 text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-6 w-[50%] rounded mb-6'>KnowMore</Link>
             </div>
             </>
         ))

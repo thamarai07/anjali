@@ -13,12 +13,12 @@ export default function Certificate() {
         </div>
         <ul className='md:mt-0 mt-4'>
             <li>
-                <span className='lg:text-[22px] text-[18px] font-semibold'>Internationally Recognized Standards:</span>
+                <span className='lg:text-[22px] text-[18px] font-semibold text-green-500'>Internationally Recognized Standards:</span>
                 <br />
-                <span className='lg:text-base text-sm lg:pt-0 pt-4'> Our commitment to quality is endorsed by ISO certification, a globally recognized standard for excellence.</span>
+                <span className='lg:text-base text-sm lg:pt-0 pt-4 '> Our commitment to quality is endorsed by ISO certification, a globally recognized standard for excellence.</span>
             </li>
             <li className='mt-4'> 
-                <span className='text-[22px] font-semibold'>Stringent Quality Control:</span>
+                <span className='text-[22px] font-semibold text-green-500'>Stringent Quality Control:</span>
                 <br />
                 <span>Rigorous quality management systems ensure that our products/services consistently meet customer expectations and regulatory requirements.</span>
             </li>
