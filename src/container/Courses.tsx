@@ -55,7 +55,7 @@ function Courses() {
   };
   return (
     <>
-      <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-5 mt-16">
+      <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-[60px] mt-16">
         Our Courses{" "}
         <span className={`text-[20px] ${Hover == true && "text-red-500"}`}>
           (ISO Certified)
@@ -91,7 +91,7 @@ function Courses() {
             ))
         }
     </div> */}
-      <div className="flex lg:flex-row flex-col justify-center items-center gap-4 w-[100%]">
+      <div className="flex lg:flex-row flex-col justify-center items-center gap-6 w-[100%] mb-[80px]">
         {Course.map((values) => (
           <>
             <div
@@ -106,10 +106,10 @@ function Courses() {
                 className="rounded-t-md"
               />
               <div className="px-4 mt-4">
-                <p className="text-[18px] pt-4 font-extrabold text-green-500 h-[70px] tracking-wide">
+                <p className="text-[18px] pt-4 font-extrabold text-blue-500 h-[70px] tracking-wide">
                   {values.course}
                 </p>
-                <div className="mt-4 mb-4 flex ">
+                <div className="mt-6 mb-4 flex ">
                   <div className="w-[45%] bg-gray-100  hover:bg-white pt-[6px] rounded shadow">
                     <FcClock
                       className={"flex w-[100%] text-gray-400 z"}
@@ -133,7 +133,7 @@ function Courses() {
               </div>
               <Link
                 href={values.herf}
-                className=" hover:bg-blue-500 bg-green-500  text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-0 w-[50%] rounded mb-6"
+                className=" hover:bg-blue-500 bg-green-500  text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-6 w-[50%] rounded mb-6"
               >
                 KnowMore
               </Link>

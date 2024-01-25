@@ -19,7 +19,7 @@ const SimpleSlider = () => {
 
   return (
     <div className="mt-14">
-        <div className="grid grid-cols-4 m-auto justify-items-center gap-10">
+        <div className="grid grid-cols-4 m-auto justify-items-center gap-14 gap-y-24">
           {
             CourseIcon.map((values)=>(
               <>

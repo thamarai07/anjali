@@ -100,12 +100,12 @@ export default function Home() {
 
       <MainLayout>
         <div className="lg:max-w-[1200px] m-auto px-10 mt-10">
-          <p className="text-center md:text-[35px] text-[25px] font-bold mb-10 mt-10">
+          <p className="text-center md:text-[35px] text-[25px] font-bold mb-[80px] mt-[60px]">
             Our Advanced Courses Can Help You Advance Your Career
           </p>
           <HomeSlider />
 
-          <p className="text-center md:text-[35px] text-[30px] font-semibold mb-5 mt-24">
+          <p className="text-center md:text-[35px] text-[30px] font-semibold  mt-[120px] mb-[60px]">
           Get chances to work at top companies
           </p>
           <InfiniteLooper speed={200} direction="left">
@@ -123,7 +123,7 @@ export default function Home() {
           <Courses />
           <Certificate />
           {/* <Content/> */}
-          <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10"></p>
+          <p className="text-center md:text-[40px] text-[30px] font-extrabold md:mt-20 mt-10 mb-[80px]"></p>
           <AnjaliStats />
           <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10">
             Features Of Anjali Computer
