@@ -20,7 +20,7 @@ export const navLinks = [
         id : 1,
         title : "Home",
         href : "/",
-        isMegaMenu :  false
+        isMegaMenu :  true
     },{
         id : 3,
         title : "Courses",
@@ -32,7 +32,7 @@ export const navLinks = [
         id : 2,
         title : "About Us",
         href : "/aboutus",
-        isMegaMenu :  false
+        isMegaMenu :  true
     },
   
     
@@ -40,7 +40,7 @@ export const navLinks = [
         id : 4,
         title : "Contact Us",
         href : "/contactus",
-        isMegaMenu :  false
+        isMegaMenu :  true
     }
 ] 
 

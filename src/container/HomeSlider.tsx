@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CourseArray } from "../../utils/links";
 import Image from "next/image";
-
+import CourseIcon from "../../utils/icons";
+import Link from "next/link";
 const SimpleSlider = () => {
   const settings = {
     dots: true,
@@ -17,9 +18,20 @@ const SimpleSlider = () => {
   };
 
   return (
-    <div className="">
-        <div></div>
-      <Slider {...settings}>
+    <div className="mt-14">
+        <div className="grid grid-cols-4 m-auto justify-items-center gap-10">
+          {
+            CourseIcon.map((values)=>(
+              <>
+              <Link href={"#"} className="bg-green-500 hover:bg-blue-500 hover:text-white hover:font-semibold p-4 rounded text-center w-[60%] m-auto">
+                {values.icons}   
+                <span className="text">{values.name}</span>
+              </Link>
+              </>
+            ))
+          }
+        </div>
+      {/* <Slider {...settings}>
        {CourseArray.map((values)=>(
         <div className="lg:!flex" key={values.id}>
             <div className="">
@@ -36,7 +48,7 @@ const SimpleSlider = () => {
             </div>
         </div>
        ))}
-      </Slider>
+      </Slider> */}
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import {Catamaran } from  "@next/font/google"
+import {Poppins } from  "@next/font/google"
 
-const catamoran = Catamaran({
-  subsets : ['tamil'],
-  weight : ["100","200","300","400","500","600","700","800","900"]
+const catamoran = Poppins({
+  subsets : ['latin'],
+  weight : ["400"]
 })
 
 export default function App({ Component, pageProps }: AppProps) {
