@@ -1,9 +1,9 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import {Catamaran } from  "@next/font/google"
+import {Public_Sans } from  "@next/font/google"
 
-const catamoran = Catamaran({
-  subsets : ['tamil'],
+const catamoran = Public_Sans({
+  subsets : ['latin'],
   weight : ["100","200","300","400","500","600","700","800","900"]
 })
 

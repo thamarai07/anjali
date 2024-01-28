@@ -25,15 +25,7 @@ export default function Courses() {
 
   <MainLayout>
     <div className='lg:max-w-[1200px] m-auto lg:px-10 '>
-        <CourseHero CourseContent={CourseContent}/>
-        <IdealFor CourseContent={CourseContent}/>
-        {/* <CoreCourse/> */}
-        <CourseForm CourseContent={CourseContent}/>
-        <ScopeofCourse CourseContent={CourseContent}/>
-        <div className='mt-20 mb-20'>
-        <AnjaliStats/>
-        </div>
-        <Testimonial/>
+       
     </div>
   </MainLayout>
 </>

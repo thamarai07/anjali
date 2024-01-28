@@ -6,6 +6,10 @@ import AnjaliStats from '@/container/AnjaliStats';
 import Courses from '@/container/Courses';
 import Testimonial from '@/container/Testimonial';
 import Certificate from '@/container/Certificate';
+import InfiniteScroll from '@/components/SmoothSlider';
+import InfiniteLooper from '@/container/Infinity';
+import { CompanyLogos } from '../../utils/logos';
+import Image from 'next/image';
 export default function Home() {
   return (
     <>
@@ -27,8 +31,26 @@ export default function Home() {
             Our Advanced Courses Can Help You Advance Your Career
           </p>
           <HomeSlider />
-          
           <Courses/>
+          <p className="text-center md:text-[35px] text-[30px] font-semibold mb-5 mt-24">
+          Get chances to work at top companies
+          </p>
+          <div className='w-4xl'>
+          <InfiniteLooper speed={200} direction="left">
+          <div className="flex gap-10 bg-gray-100 mb-5">
+              {CompanyLogos.map((values, index) => (
+                <Image
+                  key={index}
+                  alt={values.name}
+                  src={values.logo}
+                  className="object-contain p-4"
+                  width={140}
+                  height={40}
+                />
+              ))}
+            </div>
+          </InfiniteLooper>
+          </div>
           <Certificate/>
           {/* <Content/> */}
           <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10'>

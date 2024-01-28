@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,3 +40,32 @@
 .shadowBox{
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
+
+@keyframes slideAnimation {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .looper {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+  
+  .looper__innerList {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    overflow-x: hidden;
+  }
+  
+  .looper__listInstance {
+    display: flex;
+    width: max-content;
+    overflow-x: hidden;
+    animation: slideAnimation linear infinite;
+  }

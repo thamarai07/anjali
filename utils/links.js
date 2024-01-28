@@ -20,7 +20,7 @@ export const navLinks = [
         id : 1,
         title : "Home",
         href : "/",
-        isMegaMenu :  false
+        isMegaMenu :  true
     },{
         id : 3,
         title : "Courses",
@@ -32,7 +32,7 @@ export const navLinks = [
         id : 2,
         title : "About Us",
         href : "/aboutus",
-        isMegaMenu :  false
+        isMegaMenu :  true
     },
   
     
@@ -40,7 +40,7 @@ export const navLinks = [
         id : 4,
         title : "Contact Us",
         href : "/contactus",
-        isMegaMenu :  false
+        isMegaMenu :  true
     }
 ] 
 
@@ -226,7 +226,18 @@ export const UnicOfanjali = [
 
 export const CourseContent = {
     id: 1,
-    courseTitle : "Java",
+    courseTitle : "ADVANCED DIPLOMA IN JAVA TECHNOLOGY (ADJT)",
+    duration : "3 Month",
+    CoreTopics :[
+        {
+            id :1,
+            Content : "Java Technology (Core Java, Adv. Java, J2EE & XML)"
+        },
+        {
+            id :2,
+            Content : "MS-SQL Server"
+        }
+    ],
     iso : "ISO Certified",
     image : "/courseimages/java/java1.avif",
     Slogan : "Unlock the Power of Code with Our ISO Certified Training for Students and Professionals!",
