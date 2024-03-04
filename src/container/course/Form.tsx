@@ -3,15 +3,20 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { css } from '@emotion/react';
 import { ClipLoader } from 'react-spinners';
+import { CourseContentTypeing } from '@/types'
 
-function Form() {
+import axios from 'axios';
+
+const Form = ({CourseContent} :any) => {
+
   const formik = useFormik({
     initialValues: {
       name: '',
       email: '',
       mobile: '',
       qualification: '',
-      location : ''
+      center_name  : '',
+      course_name : CourseContent.courseId
     },
     validationSchema: Yup.object({
       name: Yup.string().required('Name is required'),
@@ -22,17 +27,22 @@ function Form() {
         .max(15, 'Must not exceed 15 characters')
         .required('Mobile is required'),
       qualification: Yup.string().required('Qualification is required'),
-      location: Yup.string().required('Location is required'),
+      center_name : Yup.string().required('Location is required'),
 
     }),
-    onSubmit: (values, { setSubmitting }) => {
-      // Your form submission logic goes here
-      console.log(values);
-      // Simulating an API call, remove this in your actual implementation
-      setTimeout(() => {
-        alert('Form submitted successfully');
+    onSubmit: (values, { setSubmitting ,resetForm}) => {
+      console.log(values)
+     axios.post("http://127.0.0.1:8000/api/enq_add",values).then(function (response) {
+      console.log(response.status);
+      if(response.status == 201){
         setSubmitting(false);
-      }, 1000);
+        resetForm();
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
     },
   });
 
@@ -40,22 +50,22 @@ function Form() {
     {
       id :1,
       name : "Tambaram",
-      centreCode : "anjali01",
+      ccode : "anjali01",
     },
     {
       id :2,
       name : "Selaiyur" ,
-      centreCode : "anjali02",
+      ccode : "anjali02",
     },
     {
       id :3,
       name : " Chengalpattu",
-      centreCode : "anjali03",
+      ccode : "anjali03",
     },
     {
       id :4,
       name : "Guduvancheery",
-      centreCode : "anjali04",
+      ccode : "anjali04",
     }
     
   ]
@@ -64,6 +74,25 @@ function Form() {
     <div className='border border-green-500 p-5 w-[100%] m-auto rounded shadow-md shadow-green-500'>
       <p className='text-3xl mb-8 font-semibold'>Enquiry Now </p>
       <form onSubmit={formik.handleSubmit}>
+
+      <div className='w-[100%] mb-4'>
+          <label className='text-[19px] font-semibold' >
+            Course
+          </label>
+          <br />
+          <input
+            type='text'
+            disabled
+            className='shadowBox w-[100%] border py-2 mt-1 rounded px-2'
+            value={CourseContent.courseTitle}
+          />
+           <input
+            type='hidden'
+            name='course_name'
+            value={formik.values.course_name}
+          />
+         
+        </div>
         <div className='w-[100%]'>
           <label className='text-[19px] font-semibold' htmlFor='name'>
             Name
@@ -133,27 +162,26 @@ function Form() {
           ) : null}
         </div>
         <div className='w-[100%] mt-4'>
-          <label className='text-[19px] font-semibold' htmlFor='location'>
-            Nearby Location
-          </label>
+        <label className='text-[19px] font-semibold' htmlFor='center_name'>
+  Nearby Location
+</label>
           <br />
       
 
           <select  
-          name='location' 
-          id="" 
+          name='center_name' 
           className='shadowBox w-[100%] border py-2 mt-1 rounded px-2'
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.location}
+          value={formik.values.center_name}
           >
             <option value="">Please Select </option>
             {centreArray.map((values)=>(
-              <option value={values.centreCode}>{values.name}</option>
+              <option value={values.ccode}>{values.name}</option>
             ))}
           </select>
-          {formik.touched.location && formik.errors.location ? (
-            <div className='text-red-500 text-sm'>{formik.errors.location}</div>
+          {formik.touched.center_name  && formik.errors.center_name  ? (
+            <div className='text-red-500 text-sm'>{formik.errors.center_name }</div>
           ) : null}
         </div>
         <div className='mt-4 flex justify-center'>

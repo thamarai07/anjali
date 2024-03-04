@@ -1,16 +1,90 @@
-import Head from 'next/head';
-import MainLayout from '@/components/Layuout/MainLayout';
-import HomeSlider from '@/container/HomeSlider';
-import Unic from '@/container/Unic';
-import AnjaliStats from '@/container/AnjaliStats';
-import Courses from '@/container/Courses';
-import Testimonial from '@/container/Testimonial';
-import Certificate from '@/container/Certificate';
-import InfiniteScroll from '@/components/SmoothSlider';
-import InfiniteLooper from '@/container/Infinity';
-import { CompanyLogos } from '../../utils/logos';
-import Image from 'next/image';
+import Head from "next/head";
+import MainLayout from "@/components/Layuout/MainLayout";
+import HomeSlider from "@/container/HomeSlider";
+import Unic from "@/container/Unic";
+import AnjaliStats from "@/container/AnjaliStats";
+import Courses from "@/container/Courses";
+import Testimonial from "@/container/Testimonial";
+import Certificate from "@/container/Certificate";
+import Image from "next/image";
+import InfiniteLooper from "@/container/Infinity";
+
 export default function Home() {
+
+  const CompanyLogo = [
+    {
+      id : 1,
+      campany : "/company/7611770.png",
+      comapanyName :"google"
+    },
+    {
+      id : 2,
+      campany : "/company/CGI_Inc.-Logo.wine.png",
+      comapanyName :"CGI_Inc"
+
+    },
+    {
+      id : 3,
+      campany : "/company/cisco_logo-1000px.png",
+      comapanyName :"cisco_logo"
+
+    },
+    {
+      id : 4,
+      campany : "/company/Cognizant_logo_2022.svg.png",
+      comapanyName :"Cognizant_logo"
+      
+    },
+    {
+      id : 5,
+      campany : "/company/Dell_logo.png",
+      comapanyName :"Dell_logo"
+      
+    },  
+    {
+      id : 6,
+      campany : "/company/hp-logo.com.png",
+      comapanyName :"hp-logo"
+
+    },
+    {
+      id : 7,
+      campany : "/company/IBM_logo.svg.png",
+      comapanyName :"IBM_logo"
+
+    },
+    {
+      id : 8,
+      campany : "/company/Infosys_logo.svg.png",
+      comapanyName :"Infosys_logo"
+    },
+    {
+      id : 9,
+      campany : "/company/Intel-logo-2022.png",
+      comapanyName :"Intel"
+
+    },
+    {
+      id : 10,
+      campany : "/company/png-transparent-microsoft-logo-microsoft-thumbnail.png",
+      comapanyName :"microsoft"
+    },
+    {
+      id : 11,
+      campany : "/company/sutherland-global-services.png",
+      comapanyName :"sutherland"
+
+    },
+    {
+      id : 12,
+      campany : "/company/Tata_Consultancy_Services_Logo.svg.png",
+      comapanyName :"Tata_Consultancy_Services_Logo"
+      
+    }
+  ]
+  
+
+
   return (
     <>
       <Head>
@@ -26,44 +100,40 @@ export default function Home() {
       </Head>
 
       <MainLayout>
-        <div className='lg:max-w-[1200px] m-auto px-10 mt-10'>
-          <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 mt-10'>
+        <div className="lg:max-w-[1200px] m-auto px-10 mt-10">
+          <p className="text-center md:text-[35px] text-[25px] font-bold mb-[80px] mt-[60px]">
             Our Advanced Courses Can Help You Advance Your Career
           </p>
           <HomeSlider />
-          <Courses/>
-          <p className="text-center md:text-[35px] text-[30px] font-semibold mb-5 mt-24">
+
+          <p className="text-center md:text-[35px] text-[30px] font-semibold  mt-[120px] mb-[60px]">
           Get chances to work at top companies
           </p>
-          <div className='w-4xl'>
           <InfiniteLooper speed={200} direction="left">
-          <div className="flex gap-10 bg-gray-100 mb-5">
-              {CompanyLogos.map((values, index) => (
-                <Image
-                  key={index}
-                  alt={values.name}
-                  src={values.logo}
-                  className="object-contain p-4"
-                  width={140}
-                  height={40}
-                />
-              ))}
+            <div className="flex gap-10 bg-gray-100 mb-5">
+              {
+                CompanyLogo.map((values)=>(
+                  <Image alt={values.comapanyName} src={values.campany} style={{
+                    objectFit : "contain"
+                  }} width={140} className="p-4" height={40}/>      
+                ))
+              }
+                 
             </div>
           </InfiniteLooper>
-          </div>
-          <Certificate/>
+          <Courses />
+          <Certificate />
           {/* <Content/> */}
-          <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10'>
-          
+          <p className="text-center md:text-[40px] text-[30px] font-extrabold md:mt-20 mt-10 mb-[80px]"></p>
+          <AnjaliStats />
+          <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10">
+            Features Of Anjali Computer
           </p>
-          <AnjaliStats/>
-          <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10'>
-          Features Of Anjali Computer
-          </p>
-          <Unic/>
-          <Testimonial/>
-        </div>
-      </MainLayout>
-    </>
-  );
+          <Unic />
+          <Testimonial />
+          </div>
+          </MainLayout>
+
+        </>
+)
 }

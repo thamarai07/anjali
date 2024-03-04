@@ -4,7 +4,7 @@ import Header from '../Navbar/Header'
 import TopNav from '../Navbar/TopNav'
 function MainLayout({children} : any) {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <TopNav/>
       <Header/>
       <main>

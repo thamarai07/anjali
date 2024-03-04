@@ -1,67 +1,67 @@
-import Link from 'next/link'
-import React, { useState } from 'react'
-import { GiMaterialsScience } from "react-icons/gi";
-import { TbTallymarks } from "react-icons/tb";
-import { SiSap } from "react-icons/si";
-import { FaNetworkWired } from "react-icons/fa";
-import { FaAngular } from "react-icons/fa";
-import { SiMicrosoftoffice } from "react-icons/si";
-import { SiCplusplus } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
-import { DiDotnet } from "react-icons/di";
-import { GrMysql } from "react-icons/gr";
-import { SiPhp , } from "react-icons/si";
-import { SiPython } from "react-icons/si";
-import { GrMultimedia } from "react-icons/gr";
-import { GrCloudComputer } from "react-icons/gr";
-import { IoHardwareChip } from "react-icons/io5";
-import Image from 'next/image';
+import Link from "next/link";
+import React, { useState } from "react";
+
+import { FcApproval } from "react-icons/fc";
+import { FcClock } from "react-icons/fc";
+
+import Image from "next/image";
 function Courses() {
+  const [Hover, setHover] = useState(false);
+  const [CourseId, setCourseId] = useState<number>();
 
-    const [Hover,setHover] = useState(false)
-    console.log(Hover)
-    const Course = [
-        
-       
-        {
-            id : 7,
-            course : "C, C++",
-            herf : "#",
-            thumpnail : "/courseimages/c_c++/c1.avif",
-            content : "Unlock the power of programming with C and C++, where innovation meets efficiency in the world of code!",
+  const Course = [
+    {
+      id: 7,
+      course: "MASTER DIPLOMA IN PYTHON TECHNOLOGY",
+      herf: "/python_with_django/",
+      duration: "7 Months",
+      thumpnail: "/courseimages/python/python01=2.avif",
+      content:
+        "Master the world of Python technology with our comprehensive diploma program!",
+    },
+    {
+      id: 8,
+      course: "ADVANCED DIPLOMA IN JAVA TECHNOLOGY",
+      herf: "/java_programming/",
+      duration: "3 Months",
 
+      thumpnail: "/courseimages/java/java1.avif",
+      content: "Excel in Java technology with our advanced diploma program!",
+    },
+    {
+      id: 12,
+      course: "ADVANCED DIPLOMA IN .NET TECHNOLOGY",
+      herf: "/dot_net_technology/",
+      duration: "3 Months",
+      thumpnail: "/courseimages/c_c++/c1.avif",
+      content:
+        "Dive into the advanced realms of .NET technology with our comprehensive diploma program",
+    },
+    {
+      id: 5,
+      course: "ANGULAR JS",
+      herf: "/angularjs_web_dev/",
+      duration: "3 Months",
 
-        },
-        {
-            id : 8,
-            course : "JAVA",
-            herf : "#",
-            thumpnail : "/courseimages/java/java1.avif",
-            content : "Dive into the world of endless possibilities with Java programming – where your dreams of digital brilliance come to life!"
-        },
-        {
-            id : 12,
-            course : "PYTHON",
-            herf : "#",
-            thumpnail : "/courseimages/python/python01=2.avif",
-            content : "Unlock the power of programming with Python: Where simplicity meets versatility!"
+      content:
+        "Empower your web apps with AngularJS for seamless innovation and user experiences!",
+      thumpnail: "/courseimages/angularjs/angularjs.jpg",
+    },
+  ];
 
-        },
-        {
-            id : 5,
-            course : "ANGULAR JS",
-            herf : "#",
-            content : "Unlock the power of dynamic web applications with AngularJS – where innovation meets seamless user experiences!",
-            thumpnail : "/courseimages/angularjs/angularjs.jpg",
-        }
-       
-    ]
+  const handleCourseCard = (id: number) => {
+    setCourseId(id);
+    setHover(true);
+  };
   return (
     <>
-    <p className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 mt-16'>
-            Our Courses <span className={`text-[20px] ${Hover == true && "text-red-500"}`}>(ISO Certified)</span>
-          </p>
-            {/* <div className='flex justify-center flex-wrap px-4 ' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+      <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-[60px] mt-16">
+        Our Courses{" "}
+        <span className={`text-[20px] ${Hover == true && "text-red-500"}`}>
+          (ISO Certified)
+        </span>
+      </p>
+      {/* <div className='flex justify-center flex-wrap px-4 ' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
         {
             Course.map((values)=>(
                 <>
@@ -91,25 +91,58 @@ function Courses() {
             ))
         }
     </div> */}
-    <div className='flex lg:flex-row flex-col justify-center items-center gap-4 w-[100%]'>
-
-    {
-        Course.map((values)=>(
-            <>
-            <div className='border rounded-[20px] w-[280px]'>
-                    <Image src={values.thumpnail} width={300} height={120} alt={values.course} className='rounded-t-md'/>
-                    <div className='px-4 mt-4'>
-                    <p className='text-[24px] pt-4 font-extrabold text-green-500 '>{values.course}</p>
-                    <p className='text-[14px] mt-4 h-[80px] font-medium'>{values.content}</p>
-                    </div>
-                    <Link href={values.herf} className='bg-blue-500 hover:bg-green-500 text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-4 w-[50%] rounded mb-6'>KnowMore</Link>
+      <div className="flex lg:flex-row flex-col justify-center items-center gap-6 w-[100%] mb-[80px]">
+        {Course.map((values) => (
+          <>
+            <div
+              className="border rounded-[20px] w-[300px]"
+              onMouseEnter={() => handleCourseCard(values.id)}
+            >
+              <Image
+                src={values.thumpnail}
+                width={300}
+                height={120}
+                alt={values.course}
+                className="rounded-t-md"
+              />
+              <div className="px-4 mt-4">
+                <p className="text-[18px] pt-4 font-extrabold text-blue-500 h-[70px] tracking-wide">
+                  {values.course}
+                </p>
+                <div className="mt-6 mb-4 flex ">
+                  <div className="w-[45%] bg-gray-100  hover:bg-white pt-[6px] rounded shadow">
+                    <FcClock
+                      className={"flex w-[100%] text-gray-400 z"}
+                      size={20}
+                    />
+                    <p className="text-[14px] text-center mt-1 font-medium">
+                      {values.duration}
+                    </p>
+                  </div>
+                  <div className="w-[5%]"></div>
+                  <div className="w-[45%] bg-gray-100  hover:bg-white  pt-[6px] rounded shadow">
+                    <FcApproval
+                      className={"flex w-[100%] text-gray-400 "}
+                      size={20}
+                    />
+                    <p className="text-[14px] text-center mt-1 font-medium">
+                      ISO
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Link
+                href={"/course/"+values.herf}
+                className=" hover:bg-blue-500 bg-green-500  text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-6 w-[50%] rounded mb-6"
+              >
+                KnowMore
+              </Link>
             </div>
-            </>
-        ))
-    }
-    </div>
+          </>
+        ))}
+      </div>
     </>
-  )
+  );
 }
 
-export default Courses
+export default Courses;

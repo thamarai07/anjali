@@ -1,5 +1,6 @@
 import React from 'react'
 import { CourseContentTypeing } from '@/types'
+// import Form from './Form'
 import Form from './Form'
 import InnerCoursesTrend from '../InnerCourseTrandingS'
 
@@ -18,7 +19,7 @@ function CourseForm({CourseContent}: CourseContentTypeing) {
         
         </div>
         <div className='lg:w-[40%] lg:mt-0 mt-8'>
-            <Form/>
+            <Form CourseContent={CourseContent}/>
         </div>
     </div>
     </div>

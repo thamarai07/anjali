@@ -8,6 +8,8 @@ export interface CourseContentTypeing  {
     Slogan : string,
     Introduction: any,
     ScopeofCourseContent : string,
+    CourseIcon : any,
+    courseId : string,
     ScopeofCourse: 
         {
             id :  number,
@@ -18,6 +20,7 @@ export interface CourseContentTypeing  {
             id : number,
             jobrole : string
         }[],
+    CareerProspectsJobRolesContent : string,
     IdealFor : 
         {
             id : number,

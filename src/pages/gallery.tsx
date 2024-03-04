@@ -1,14 +1,25 @@
 import MainLayout from '@/components/Layuout/MainLayout'
 import Head from 'next/head'
-import CourseHero from '@/container/course/hero'
-import React from 'react'
-import { CourseContent } from '../../utils/links'
-import IdealFor from '@/container/course/IdealFor'
-import CourseForm from '@/container/course/CourseForm'
-import ScopeofCourse from '@/container/course/ScopeofCourse'
-import AnjaliStats from '@/container/AnjaliStats'
-import Testimonial from '@/container/Testimonial'
+import React, { useState } from 'react'
+import {Galleryimg,Galleryimg2} from "../../utils/gallery"
+import 'photoswipe/dist/photoswipe.css'
+import Image from 'next/image'
+import FsLightbox from 'fslightbox-react'
 export default function Courses() {
+ 
+
+  const [lightboxController, setLightboxController] = useState({
+		toggler: false,
+		slide: 1
+	});
+
+	function openLightboxOnSlide(number : any) {
+		setLightboxController({
+			toggler: !lightboxController.toggler,
+			slide: number
+		});
+	}
+
   return (
     <>
     <Head>
@@ -24,9 +35,29 @@ export default function Courses() {
   </Head>
 
   <MainLayout>
-    <div className='lg:max-w-[1200px] m-auto lg:px-10 '>
-       
+  <h1 className='lg:text-[30px] text-[24px] font-bold text-center p-6 text-green-500 leading-10'>Explore the Vibrance of Our Past Events: A Captivating Gallery Showcase</h1>
+  <h3 className='lg:text-4xl text-xl text-center mt-5 font-semibold text-blue-500'>Free...Career Guidance WorkShop (17th Dec - 2023)</h3>
+  <h2 className='text-2xl font-bold text-center mb-10 mt-10'>Chengalpattu Branch <span>- 93+ students</span></h2>
+  <button className='m-auto block bg-blue-600 text-white px-4 py-4 rounded font-semibold' onClick={() => openLightboxOnSlide(1)}>
+				View More...
+			</button>
+			<FsLightbox
+				toggler={lightboxController.toggler}
+				sources={
+          Galleryimg2
+				}
+				slide={lightboxController.slide}
+			/>
+      <div className='lg:grid lg:grid-cols-3'>
+    {
+      Galleryimg.map((valuse)=>(
+        <div className=' p-10 block m-auto'>
+        <Image src={valuse.src} width={300} height={200} alt={valuse.caption}/>
+        </div>
+      ))
+    }
     </div>
+
   </MainLayout>
 </>
   )

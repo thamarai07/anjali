@@ -22,14 +22,19 @@ export const navLinks = [
         href : "/",
         isMegaMenu :  true
     },{
-        id : 3,
+        id : 2,
         title : "Courses",
         href : "/courese/",
         isMegaMenu :  true
     },
-    
     {
-        id : 2,
+        id : 3,
+        title : "Gallery",
+        href : "/gallery/",
+        isMegaMenu :  true
+    },
+    {
+        id : 4,
         title : "About Us",
         href : "/aboutus",
         isMegaMenu :  true
@@ -37,9 +42,9 @@ export const navLinks = [
   
     
     {
-        id : 4,
+        id : 5,
         title : "Contact Us",
-        href : "/contactus",
+        href : "/Contactus",
         isMegaMenu :  true
     }
 ] 
@@ -228,6 +233,7 @@ export const CourseContent = {
     id: 1,
     courseTitle : "ADVANCED DIPLOMA IN JAVA TECHNOLOGY (ADJT)",
     duration : "3 Month",
+    slug : "java",
     CoreTopics :[
         {
             id :1,
@@ -294,6 +300,8 @@ export const CourseContent = {
             scope : "Project Management and Collaboration"
         },
     ],
+    CareerProspectsJobRolesContent: "Embark on a rewarding professional journey with our ADVANCED DIPLOMA IN JAVA TECHNOLOGY (ADJT) course, opening doors to diverse career prospects. As a Java Developer, you'll be immersed in designing and implementing Java-based applications, contributing to high-quality software solutions through coding, debugging, and testing. If you aspire to be a Software Architect, this program equips you with the skills to lead the design and implementation of complex software structures, collaborate with stakeholders, and evaluate cutting-edge technologies. These career paths are just a glimpse of the exciting opportunities that await you upon completion of our ISO Certified course, preparing you for success in the dynamic field of Java technology.Explore the content below to discover the key points and advantages awaiting you on this transformation professional journey:",
+
     CareerProspectsJobRoles: [
         {
             id : 1,
@@ -382,31 +390,124 @@ export const CourseContent = {
             ideal : "IT Professionals and System Administrators:"
         }
     ],
-    BenefitsoftheCourse : [
+   
+    id: 2,
+    courseTitle: "PROFESSIONAL CERTIFICATION IN MICROSOFT WINDOWS",
+    duration: "2 Months",
+    CoreTopics: [
         {
-            id : 1,
-            Benefit : " Expert-Level Mastery: Gain a deep understanding of the Java programming language and its advanced features. Master complex concepts such as multithreading, networking, design patterns, and advanced data structures."
+            id: 1,
+            Content: "Windows Operating System Fundamentals"
         },
         {
-            id : 2 ,
-            Benefit : "Framework Proficiency: Learn to leverage powerful Java frameworks like Spring and Hibernate to streamline development and build robust, scalable applications."
-        }, 
+            id: 2,
+            Content: "File Management and Navigation in Windows"
+        },
         {
-            id : 3 ,
-            Benefit : "Database Connectivity: Acquire expertise in database connectivity using JDBC, enabling you to seamlessly integrate Java applications with various databases."
-        }
-        ,  
+            id: 3,
+            Content: "System Configuration and Settings"
+        },
         {
-            id : 4 ,
-            Benefit : "Web Development Prowess: Explore the intricacies of web development with Servlets and JSP (Java Server Pages). Develop the skills to create dynamic and interactive web applications."
+            id: 4,
+            Content: "Troubleshooting Common Windows Issues"
         }
-        ,
+        // Add more core topics related to Microsoft Windows
+    ],
+    iso: "ISO Certified",
+    image: "/courseimages/windows/windows1.avif",
+    Slogan: "Navigate the World of Microsoft Windows with Confidence!",
+    Introduction: <>
+        The Professional Certification in Microsoft Windows is a comprehensive program designed to impart essential skills and knowledge for effective utilization of the Windows operating system. Whether you are a beginner or seeking to enhance your expertise, this course covers everything you need to navigate and manage Windows efficiently. From fundamental concepts to advanced troubleshooting techniques, our curriculum is crafted to empower you with the proficiency required for a successful career in IT support and system administration.
+        <br/>
+        <br/>
+        Participants will delve into topics such as Windows Operating System Fundamentals, File Management, System Configuration, and troubleshooting common issues, gaining practical insights into the intricacies of Microsoft Windows.
+    </>,
+    ScopeofCourseContent: "Our course is tailored to cater to individuals at various skill levels, from beginners to experienced professionals. By the end of the program, you will possess the competence to handle diverse Windows environments, ensuring a solid foundation for roles in IT support, system administration, and desktop management.",
+    ScopeofCourse: [
         {
-            id : 5,
-            Benefit : "Enterprise-Grade Applications: Dive into the world of Enterprise JavaBeans (EJB) to understand how to build scalable, enterprise-level applications that meet the demands of modern businesses."
+            id: 1,
+            scope: "Windows Operating System Fundamentals"
+        },
+        {
+            id: 2,
+            scope: "Efficient File Management and Navigation"
+        },
+        {
+            id: 3,
+            scope: "System Configuration for Optimal Performance"
+        },
+        {
+            id: 4,
+            scope: "Advanced Troubleshooting Techniques"
+        },
+        // Add more scopes related to Microsoft Windows
+    ],
+    CareerProspectsJobRolesContent: "Explore a myriad of career opportunities with the completion of our Professional Certification in Microsoft Windows. Below are some of the key job roles that await you in the dynamic field of IT:",
+    CareerProspectsJobRoles: [
+        {
+            id: 1,
+            jobrole: "IT Support Specialist"
+        },
+        {
+            id: 2,
+            jobrole: "System Administrator"
+        },
+        {
+            id: 3,
+            jobrole: "Desktop Support Technician"
+        },
+        {
+            id: 4,
+            jobrole: "Network Administrator"
+        },
+        {
+            id: 5,
+            jobrole: "Technical Support Analyst"
+        },
+        // Add more job roles related to Microsoft Windows
+    ],
+    IdealFor: [
+        {
+            id: 1,
+            ideal: "Beginners",
+        },
+        {
+            id: 2,
+            ideal: "IT Enthusiasts"
+        },
+        {
+            id: 3,
+            ideal: "System Administrators Seeking Certification"
+        },
+        {
+            id: 4,
+            ideal: "Help Desk Professionals"
+        },
+        {
+            id: 5,
+            ideal: "Career Switchers to IT"
+        },
+        // Add more ideal candidate profiles
+    ],
+    BenefitsoftheCourse: [
+        {
+            id: 1,
+            Benefit: "Master Windows Operating System Fundamentals"
+        },
+        {
+            id: 2,
+            Benefit: "Efficient File Management and Navigation Skills"
+        },
+        {
+            id: 3,
+            Benefit: "Advanced System Configuration Techniques"
+        },
+        {
+            id: 4,
+            Benefit: "Expert Troubleshooting Abilities"
         }
+        // Add more benefits related to Microsoft Windows
     ]
-
     
 
 }

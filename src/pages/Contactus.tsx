@@ -9,6 +9,7 @@ import CourseForm from '@/container/course/CourseForm'
 import ScopeofCourse from '@/container/course/ScopeofCourse'
 import AnjaliStats from '@/container/AnjaliStats'
 import Testimonial from '@/container/Testimonial'
+import Image from 'next/image'
 export default function Courses() {
   return (
     <>
@@ -25,8 +26,12 @@ export default function Courses() {
   </Head>
 
   <MainLayout>
-Welcome to our Contact Us page, where your queries find a swift resolution! At Anjalicomputereducation, we take pride in our dedicated customer care service, committed to providing you with comprehensive information and assistance. Our efficient team ensures that your inquiries are addressed promptly, guaranteeing a response within 24 hours. Your satisfaction is our priority, and we strive to make your experience seamless. Feel free to reach out, and let us assist you in any way we can. Thank you for choosing Anjalicomputereducation.
-   <p></p>
+    {/* <Image src={"/contactus/cuteanimated_353.jpg"} className='opacity-5' width={1200} height={800} alt='contactus' /> */}
+
+    <p className="text-black font-semibold text-[16px] p-20 leading-10 tracking-wider" >
+  Welcome to our Contact Us page, where your queries find a swift resolution! At Anjalicomputereducation, we take pride in our dedicated customer care service, committed to providing you with comprehensive information and assistance. Our efficient team ensures that your inquiries are addressed promptly, guaranteeing a response within 24 hours. Your satisfaction is our priority, and we strive to make your experience seamless. Feel free to reach out, and let us assist you in any way we can. Thank you for choosing Anjalicomputereducation.
+</p>
+
   </MainLayout>
 </>
   )

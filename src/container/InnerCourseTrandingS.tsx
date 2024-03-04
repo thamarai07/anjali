@@ -19,7 +19,7 @@ import Image from 'next/image';
 function InnerCoursesTrend() {
 
     const [Hover,setHover] = useState(false)
-    console.log(Hover)
+   
     const Course = [
         {
             id : 1,

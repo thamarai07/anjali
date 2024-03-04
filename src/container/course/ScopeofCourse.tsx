@@ -2,6 +2,15 @@ import React from 'react'
 import { CourseContentTypeing } from '@/types'
 import { VscDebugBreakpointData } from "react-icons/vsc";
 import { FaJava } from "react-icons/fa6";
+import { TbBrandOffice } from "react-icons/tb";
+import { SiAdobedreamweaver } from "react-icons/si";
+import { DiIllustrator } from "react-icons/di";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiAdobeindesign } from "react-icons/si";
+import { GiNetworkBars } from "react-icons/gi";
+import { TbAssembly } from "react-icons/tb";
+import { MdOutlineAccountTree } from "react-icons/md";
+import { CgTally } from "react-icons/cg";
 
 
 function ScopeofCourse({CourseContent}:CourseContentTypeing) {
@@ -18,7 +27,19 @@ function ScopeofCourse({CourseContent}:CourseContentTypeing) {
             ))    
             }
         </div>
-        <FaJava size={160} className="text-green-500"/>
+        {/* <FaJava size={160} className="text-green-500"/> */}
+        {CourseContent.id == 1 && <TbBrandOffice size={160} className="text-green-500"/>}
+        {CourseContent.id == 22 && <SiAdobedreamweaver size={160} className="text-green-500"/>}
+        {CourseContent.id == 20 && <DiIllustrator size={160} className="text-green-500"/>}
+        {CourseContent.id == 19 && <SiAdobephotoshop size={160} className="text-green-500"/>}
+        {CourseContent.id == 18 && <SiAdobeindesign size={160} className="text-green-500"/>}
+        {CourseContent.id == 15 && <GiNetworkBars size={160} className="text-green-500"/>}
+        {CourseContent.id == 13 && <TbAssembly size={160} className="text-green-500"/>}
+        {CourseContent.id == 10 && <MdOutlineAccountTree size={160} className="text-green-500"/>}
+        {CourseContent.id == 9 && <CgTally size={160} className="text-green-500"/>}
+
+        
+        
         </div>
     </div>
   )

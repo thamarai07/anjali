@@ -10,9 +10,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const [NavOpen, setNavOpen] = useState(true);
-  const Show = (data: boolean) => {
-    setNavOpen(data);
-  };
+ 
   const HanldeSVGClosed = () => {
     setIsMenuOpen(false);
     setNavOpen(false);
@@ -31,16 +29,27 @@ const Header = () => {
   return (
     <nav>
       <div className="md:w-[100%]  bg-[#002b17] shadow-md relative z-10">
-        <div className="flex justify-between md:px-20 px-2 align-center items-center text-white">
-          <div id="logo">
-            <Link href={adpage == undefined ? "/" : router.asPath}>
-              <span className="flex items-center p-3 px-4 cursor-pointer">
-                <Image width={180} height={400} alt="anjalicomputereducation" title="anjalicomputereducation" src="/anjalilogo.png" className="m-auto p-4" />
-              </span>
+        <div className="">
+          {
+            router.pathname == "/" &&
+            <Link href={"/"}>
+            <Image src="/assets/anjali/banfirst.jpg" className="m-auto pt-10" alt="" width={800} height={100} />
             </Link>
+          }
+          
+         
+        </div>
+        <div className="flex justify-between md:px-20 px-2 align-center items-center text-white">
+          <div >
+          {
+            router.pathname != "/" &&
+            <Link href={"/"}>
+            <Image src="/anjalilogo.png" className="m-auto " alt="" width={200} height={100} />
+            </Link>
+          }
           </div>
           {adpage == undefined && ad == undefined && cm == undefined && (
-            <div className="hidden lg:flex  lg:flex-row md:flex-col justify-end items-center">
+            <div className="hidden lg:flex  lg:flex-row md:flex-col justify-end items-center p-8">
               <div id="navLinks" className="flex justify-between items-center">
                 {navLinks.map((link: any, index: any) => (
                   <NavLink
@@ -90,7 +99,7 @@ const Header = () => {
                 leaveTo="transform scale-95 opacity-0"
               >
                 <div className="absolute top-16 right-0 z-50 w-[100%]">
-                  <div className="bg-white border rounded shadow-sm">
+                  <div className="bg-white border rounded shadow-sm text-black">
                     <div className="lg:mb-4 mb-10">
                       <div id="navLinks" className="grid grid-flow-row mt-10">
                         {navLinks.map((link: any, index: any) => (
