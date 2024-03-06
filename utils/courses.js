@@ -23,7 +23,6 @@ export const CourseList = [
                 id : 3,
                 stream : 6,
                 slug: "/java_programming/",
-
                 course : "JAVA TECHNOLOGY	"
             },
             {

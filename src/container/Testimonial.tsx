@@ -25,7 +25,7 @@ const Testimonial: FC<TestimonialProps> = ({}) => {
         return (
             <>  
                 <div className='mt-20 mb-10 '>
-                    <h4 className='text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10'> Testimonials </h4>
+                    <h4 className='text-center md:text-[45px] text-[30px] font-semibold  lg:mt-[120px] mb-[60px] antialiased'> Testimonials </h4>
                     <div className='md:flex gap-4 mt-10 p-4 font-semibold'>
                         {
                             TestiMonialArr.map((values)=>(

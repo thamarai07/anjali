@@ -7,7 +7,7 @@ function CourseForm({CourseContent}: CourseContentTypeing) {
   return (
     <>
     <div className='mt-10 lg:px-0 px-4'>
-    <h2 className='text-3xl font-semibold'>Course Overview</h2>
+    <h2 className='lg:text-3xl text-2xl font-semibold'>Course Overview</h2>
     <div className='lg:flex mt-4 gap-24' >
         <div className='lg:w-[60%]'>
             <p className='font-medium text-[18px]'>

@@ -16,25 +16,201 @@ import {
   HomeIcon,
   PhotoIcon,
   UserGroupIcon,
-  PhoneIcon
+  PhoneIcon,
 } from "@heroicons/react/24/solid";
-import { BiLogoPython } from "react-icons/bi";
-const navListMenuItems = [
+import Link from "next/link";
+import { useRouter } from "next/router";
+export const navListMenuItems = [
   {
-    title: "@material-tailwind/html",
-    description:
-      "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
-    
+    title: "SOFTWARE",
+    description: [
+      {
+        id: 1,
+        name: "C - LANGUAGE	",
+        url: "/c_programming/",
+      },
+      {
+        id: 2,
+        name: "C++ WITH OOPS",
+        url: "/cpp_oop/",
+      },
+      {
+        id: 3,
+        name: "JAVA TECHNOLOGY",
+        url: "/java_programming/",
+      },
+      {
+        id: 4,
+        name: "PYTHON WITH DJANGO",
+        url: "/python_with_django/",
+      },
+      {
+        id: 5,
+        name: "DOT NET TECHNOLOGY",
+        url: "/dot_net_technology/",
+      },
+      {
+        id: 6,
+        name: "ANGULAR JS",
+        url: "/angularjs_web_dev/",
+      },
+    ],
   },
   {
-    title: "@material-tailwind/react",
-    description:
-      "Learn how to use @material-tailwind/react, packed with rich components for React.",
+    title: "MS - OFFICE",
+    description: [
+      {
+        id: 1,
+        name: "MS - WINDOWS",
+        url: "/mswindows/",
+      },
+      {
+        id: 2,
+        name: "MS - WORD",
+        url: "/msword/",
+      },
+      {
+        id: 3,
+        name: "MS - EXCEL",
+        url: "/msexcel/",
+      },
+      {
+        id: 4,
+        name: "ADVANCE EXCEL",
+        url: "/advancedexcel/",
+      },
+      {
+        id: 2,
+        name: "MS - POWER POINT",
+        url: "/mspowerpoint/",
+      },
+      {
+        id: 3,
+        name: "MS - ACCESS",
+        url: "/msaccess/",
+      },
+    ],
   },
   {
-    title: "Material Tailwind PRO",
-    description:
-      "A complete set of UI Elements for building faster websites in less time.",
+    title: "TALLY",
+    description: [
+      {
+        id: 1,
+        name: "TALLY ERP9",
+        url: "/tallyerp9/",
+      },
+      {
+        id: 2,
+        name: "TAXATION & GST CONCEPTS",
+        url: "/taxation_gst_concepts/",
+      },
+      {
+        id: 3,
+        name: "TALLY PRIME",
+        url: "/tally_prime/",
+      },
+      {
+        id: 4,
+        name: "CLOUD ACCOUNTING",
+        url: "/cloud_accounting/",
+      },
+    ],
+  },
+  {
+    title: "HARDWARE",
+    description: [
+      {
+        id: 1,
+
+        name: "BASIC & DIGITAL ELECTRONICS",
+        url: "/basic_digital_electronics/",
+      },
+      {
+        id: 2,
+
+        name: "PC ARCHITECTURE",
+        url: "/pc_architecture/",
+      },
+      {
+        id: 3,
+
+        name: "PC ASSEMBLING	",
+        url: "/pc_assembling/",
+      },
+
+      {
+        id: 5,
+
+        name: "SOFTWARE INSTALLATION",
+        url: "/software_installation/",
+      },
+      {
+        id: 6,
+
+        name: "NETWORKING ESSENTIALS",
+        url: "/networking_essentials/",
+      },
+      {
+        id: 7,
+
+        name: "WINDOWS SERVER	",
+        url: "/windows_server/",
+      },
+    ],
+  },
+  {
+    title: "MULTIMEDIA",
+
+    description: [
+      {
+        id: 1,
+
+        name: "GRAPHIC DESIGNER",
+        url: "/graphic_design_mastery/",
+      },
+      {
+        id: 2,
+
+        name: "ADOBE INDESIGN",
+        url: "/adobe_indesign/",
+      },
+      {
+        id: 3,
+
+        name: "ADOBE PHOTOSHOP",
+        url: "/adobe_photoshop/",
+      },
+      {
+        id: 4,
+
+        name: "ADOBE ILLUSTRATOR",
+        url: "/adobe_illustrator/",
+      },
+      {
+        id: 5,
+
+        name: "WEB DESIGNING",
+        url: "/web_designing/",
+      },
+      {
+        id: 6,
+        stream: 5,
+        name: "ADOBE DREAMWEAVER",
+        url: "/adobe_dreamweaver/",
+      },
+      {
+        id: 7,
+        stream: 5,
+        name: "ABODE ANIMATE",
+        url: "/adobe_animate/",
+      },
+      {
+        id: 8,
+        stream: 5,
+        name: "ADOBE AUDITION/VFX	",
+        url: "/adobe_audition_vfx/",
+      },
+    ],
   },
 ];
 
@@ -42,16 +218,18 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const renderItems = navListMenuItems.map(({ title, description }) => (
-    <a href="#" key={title} className="">
-      <MenuItem>
-        <Typography variant="h6"  className="mb-1 lg:text-black text-white flex" >
-          {title} <BiLogoPython size={24}/>
-        </Typography>
-        <Typography variant="small" color="gray" className="font-normal lg:text-black text-white">
-          {description}
-        </Typography>
-      </MenuItem>
-    </a>
+    <MenuItem className="flex flex-col bg-white">
+      <Typography variant="h6" color="blue-gray" className="mb-1 font-bold text-green-500">
+        {title}
+      </Typography>
+      <Typography  className="font-medium text-[12px] grid " >
+        {description.map(({ name, id, url }) => (
+          <Link key={id} href={"/course/" + url} className="py-3 hover:bg-[#041E42] text-black hover:text-white p-1 rounded">
+            {name}
+          </Link>
+        ))}
+      </Typography>
+    </MenuItem>
   ));
 
   return (
@@ -71,17 +249,15 @@ function NavListMenu() {
             </MenuItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden grid-cols-7 gap-3 overflow-visible lg:grid">
-          <ul className="col-span-4 flex w-full flex-col gap-1">
-            {renderItems}
-          </ul>
+        <MenuList className="hidden grid-cols-7 gap-3 overflow-visible lg:flex mx-10">
+          <ul className="flex justify-center gap-2 mx-10">{renderItems}</ul>
         </MenuList>
       </Menu>
       <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
         <Square3Stack3DIcon className="h-[18px] w-[18px]  font-medium" />{" "}
         Courses{" "}
       </MenuItem>
-      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
+      <ul className="lg:ml-6 flex w-full flex-col gap-1 lg:hidden">
         {renderItems}
       </ul>
     </React.Fragment>
@@ -93,31 +269,34 @@ const navListItems = [
   {
     label: "Home",
     icon: HomeIcon,
+    href : "/"
   },
   {
     label: "Gallery",
     icon: PhotoIcon,
+    href : "/gallery/"
   },
   {
     label: "About Us",
     icon: UserGroupIcon,
+    href : "/aboutus/"
   },
   {
     label: "Contact Us",
     icon: PhoneIcon,
+    href : "Contactus"
   },
-  
 ];
 
 function NavList() {
   return (
-    <ul className=" flex flex-col gap-8 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center text-white">
+    <ul className=" flex flex-col lg:gap-8 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center text-white">
       <NavListMenu />
-      {navListItems.map(({ label, icon }, key) => (
+      {navListItems.map(({ label, icon ,href}, key) => (
         <Typography
           key={label}
           as="a"
-          href="#"
+          href={href}
           className="font-medium text-white text-[18px]"
         >
           <MenuItem className="flex items-center gap-2 text-white">
@@ -137,6 +316,14 @@ const NavLink = () => {
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
+  const {query} = useRouter()
+  
+
+  React.useEffect(()=>{
+    if(query.course){
+      setIsNavOpen(false)
+    }
+  },[query.course])
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -144,8 +331,10 @@ const NavLink = () => {
     );
   }, []);
 
+  // block w-full max-w-screen-2xl rounded-xl  shadow-md backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 border border-white/80 text-white lg:p-4 border-none bg-[#002b17]
+
   return (
-    <Navbar className=" lg:p-4  border-none bg-[#002b17]">
+    <Navbar className=" lg:p-4 lg:py-4 px-1 lg:px-8 py-4 border-none bg-[#002b17]">
       <div className="relative mx-auto flex items-center justify-end text-white">
         <div className="hidden lg:block text-white">
           <NavList />
@@ -160,7 +349,7 @@ const NavLink = () => {
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
       </div>
-      <MobileNav open={isNavOpen} className="overflow-scroll " >
+      <MobileNav open={isNavOpen} className="overflow-scroll ">
         <NavList />
       </MobileNav>
     </Navbar>

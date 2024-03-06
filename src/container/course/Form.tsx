@@ -31,7 +31,6 @@ const Form = ({CourseContent} :any) => {
 
     }),
     onSubmit: (values, { setSubmitting ,resetForm}) => {
-      console.log(values)
      axios.post("http://127.0.0.1:8000/api/enq_add",values).then(function (response) {
       console.log(response.status);
       if(response.status == 201){

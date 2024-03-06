@@ -4,7 +4,7 @@ import React from 'react'
 export default function Certificate() {
   return (
     <div className='mt-16 '>
-        <h2 className='md:text-[32px] text-[28px] text-center font-bold mb-[60px]
+        <h2 className='text-center md:text-[45px] text-[30px] font-semibold  lg:mt-[120px] mt-20 mb-[60px] antialiased
         '>Certified Excellence: Our ISO Accreditation</h2>
         <div className='mt-10 border rounded-lg lg:px-10 px-4 lg:py-6 py-4'>
         <div className='lg:flex gap-10 md:mt-0 mt-4'>

@@ -21,23 +21,33 @@ function InnerCoursesTrend() {
     const [Hover,setHover] = useState(false)
    
     const Course = [
-        {
-            id : 1,
-            course : "Data science",
-            herf : "#"
-        },
+        // {
+        //     id : 1,
+        //     course : "Data science",
+        //     herf : "#"
+        // },
         {
             id : 2,
             course : "Tally Prime",
-            herf : "#"
+            href : "tally_prime"
 
         },
         {
-            id : 3,
-            course : "SAP",
-            herf : "#"
-
+            id : 5 ,
+            course : "AngularJS",
+            href : "angularjs_web_dev"
         },
+        {
+            id : 6,
+            course : "Microsoftoffice",
+            href : "mswindows"
+        }
+        // {
+        //     id : 3,
+        //     course : "SAP",
+        //     herf : "#"
+
+        // },
      
     ]
   return (
@@ -50,13 +60,13 @@ function InnerCoursesTrend() {
             Course.map((values)=>(
                 <>
                 <div className=' border shadow-md text-white px-4  rounded text-[22px] font-medium '>
-                <div className='flex justify-center py-4 px-2'>
+                <Link href={values.href} className='flex justify-center py-4 px-2'>
                 {values.id == 1 && <GiMaterialsScience size={60} className="bg-blue-500 p-1"/>}
-                {values.id == 2 && <TbTallymarks size={60} className="bg-red-500 p-1"/>}
-                {values.id == 3 && <SiSap size={60} className="bg-slate-400 p-1"/>}
+                {values.id == 2 && <TbTallymarks size={60} className="bg-blue-500 p-1 rounded"/>}
+                {values.id == 3 && <SiSap size={60} className="bg-orange-400 p-1 "  />}
                 {values.id == 4 &&  <FaNetworkWired size={40}/>}
-                {values.id == 5 && <FaAngular size={40}/>}
-                {values.id == 6 && <SiMicrosoftoffice size={40}/>}
+                {values.id == 5 && <FaAngular size={60} className="bg-red-500 p-1 rounded"/>}
+                {values.id == 6 && <SiMicrosoftoffice size={60} className="bg-indigo-500 p-1 rounded"/>}
                 {values.id == 7 && <SiCplusplus size={40}/>}
                 {values.id == 8 && <FaJava size={40}/>}
                 {values.id == 9 && <DiDotnet size={40}/>}
@@ -67,8 +77,8 @@ function InnerCoursesTrend() {
                 {values.id == 14 &&<GrCloudComputer size={40}/>}
                 {values.id == 15 &&<IoHardwareChip size={40}/>}
                 {values.id == 16 && <Image src={"/assets/autocad.svg"} height={40} width={40} alt='autocad' className='text-white'/>}                
-                </div>
-                <Link href={values.herf} key={values.id} className='text-black text-center block text-[18px] font-bold w-[100%]'>{values.course}</Link>
+                </Link>
+                <Link href={values.href} key={values.id} className='text-black text-center block text-[18px] font-bold w-[100%]'>{values.course}</Link>
                 </div>
 
                 </>

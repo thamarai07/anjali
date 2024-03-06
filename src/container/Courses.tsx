@@ -55,7 +55,7 @@ function Courses() {
   };
   return (
     <>
-      <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-[60px] mt-16">
+      <p className="text-center md:text-[45px] text-[30px] font-semibold  lg:mt-[80px] mt-10 mb-[60px] antialiased">
         Our Courses{" "}
         <span className={`text-[20px] ${Hover == true && "text-red-500"}`}>
           (ISO Certified)
@@ -122,8 +122,9 @@ function Courses() {
                   <div className="w-[5%]"></div>
                   <div className="w-[45%] bg-gray-100  hover:bg-white  pt-[6px] rounded shadow">
                     <FcApproval
-                      className={"flex w-[100%] text-gray-400 "}
+                      className={"flex w-[100%]  text-[#0BDA51]"}
                       size={20}
+                      color="red"
                     />
                     <p className="text-[14px] text-center mt-1 font-medium">
                       ISO
@@ -133,7 +134,7 @@ function Courses() {
               </div>
               <Link
                 href={"/course/"+values.herf}
-                className=" hover:bg-blue-500 bg-green-500  text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-6 w-[50%] rounded mb-6"
+                className=" hover:bg-blue-500 bg-[#0BDA51]  text-[16px] font-semibold text-white px-4 py-1 m-auto block text-center mt-6 w-[50%] rounded mb-6"
               >
                 KnowMore
               </Link>

@@ -83,3 +83,9 @@ button[role=menuitem]{
   color: white !important;
 
 }
+
+.gradient_one{
+background-color: #19f811;
+background-image: linear-gradient(319deg, #fde74c 0%, #32ff7a 37%, #2fcbe0 100%);
+
+}

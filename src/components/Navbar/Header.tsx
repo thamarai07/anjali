@@ -2,14 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import NavLink from "../Nav/nav-link";
-import {
-  navLinks,
-  TestLinks,
-  TestLinks2,
-  TestLinksContent,
-  TestLinksContents,
-} from "../../../utils/links";
-import { Transition } from "@headlessui/react";
+
 import Image from "next/image";
 
 const Header = () => {
@@ -27,10 +20,7 @@ const Header = () => {
     setNavOpen(true);
   };
 
-  const { adpage } = router.query;
-  const { ad } = router.query;
-  const { cm } = router.query;
-  const course1 = "/course/python-software-training-course/";
+
 
   return (
     <nav>
@@ -48,8 +38,21 @@ const Header = () => {
             </Link>
           )}
         </div>
-        <div className="flex justify-between md:px-20 px-2 align-center items-center text-white">
-          <div>
+        <div className="lg:hidden block">
+            {router.pathname != "/" && (
+              <Link href={"/"}>
+                <Image
+                  src="/anjalilogo.png"
+                  className="m-auto "
+                  alt=""
+                  width={200}
+                  height={100}
+                />
+              </Link>
+            )}
+          </div>
+        <div className="flex justify-between md:px-20 px-2 lg:py-4 py-0 align-center items-center text-white">
+          <div className="lg:block hidden">
             {router.pathname != "/" && (
               <Link href={"/"}>
                 <Image
@@ -63,9 +66,7 @@ const Header = () => {
             )}
           </div>
 
-          <NavLink/>
-         
-        
+          <NavLink />
         </div>
       </div>
     </nav>

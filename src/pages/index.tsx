@@ -101,16 +101,20 @@ export default function Home() {
 
       <MainLayout>
         <div className="lg:max-w-[1200px] m-auto px-10 mt-10">
-          <p className="text-center md:text-[35px] text-[25px] font-bold mb-[80px] mt-[60px]">
-            Our Advanced Courses Can Help You Advance Your Career
-          </p>
+          <p className="text-center md:text-[45px] text-[25px] leading-relaxed  font-bold lg:mb-[100px] lg:mt-[80px] antialiased ">
+            Our Advanced Courses Can Help You Advance <span className="text-red-500 "> Your Career </span>
+          </p> 
           <HomeSlider />
-
-          <p className="text-center md:text-[35px] text-[30px] font-semibold  mt-[120px] mb-[60px]">
+        </div>
+         
+          <p className="gradient_one text-center md:text-[45px] text-[30px] font-semibold  lg:mt-[120px] mt-20 mb-[60px] antialiased  ">
+            
           Get chances to work at top companies
           </p>
-          <InfiniteLooper speed={200} direction="left">
-            <div className="flex gap-10 bg-gray-100 mb-5">
+          <div className="lg:max-w-[1200px] m-auto px-10 mt-10">
+          {/* </div> */}
+          <InfiniteLooper speed={400} direction="left">
+            <div className="flex gap-24 bg-gray-100 mb-5">
               {
                 CompanyLogo.map((values)=>(
                   <Image alt={values.comapanyName} src={values.campany} style={{
@@ -126,7 +130,7 @@ export default function Home() {
           {/* <Content/> */}
           <p className="text-center md:text-[40px] text-[30px] font-extrabold md:mt-20 mt-10 mb-[80px]"></p>
           <AnjaliStats />
-          <p className="text-center md:text-[40px] text-[30px] font-extrabold mb-5 md:mt-20 mt-10">
+          <p className="text-center md:text-[45px] text-[30px] font-semibold  lg:mt-[120px] mt-20 mb-[60px] antialiased">
             Features Of Anjali Computer
           </p>
           <Unic />
