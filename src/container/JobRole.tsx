@@ -5,7 +5,7 @@ const JobRole = ({CourseContent}: CourseContentTypeing) =>{
     return(
         <>
            <div className=' mt-10 lg:px-0 px-4'>
-        <p className='lg:text-3xl text-xl text-center lg:mb-0 mb-2 font-bold text-green-400'>Job's for {CourseContent.courseTitle} </p>
+        <h3 className='lg:text-3xl text-xl text-center lg:mb-0 mb-2 font-bold text-green-400'>Job's for {CourseContent.courseTitle} </h3>
         <div className='flex flex-wrap lg:mt-8 justify-center items-center'>
         {CourseContent.CareerProspectsJobRolesContent}
         </div>

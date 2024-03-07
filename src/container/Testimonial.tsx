@@ -32,7 +32,7 @@ const Testimonial: FC<TestimonialProps> = ({}) => {
                                 <>
                                 <div className='border border-green-600 p-4 lg:mb-0 mb-4'>
                                 <div className=''>
-                                <h3 className='text-[24px] flex items-center gap-2 font-semibold'>{values.studentName} {values.id <= 2  ? <FcBusinesswoman/> : <FcBusinessman/> } </h3>
+                                <h6 className='text-[24px] flex items-center gap-2 font-semibold'>{values.studentName} {values.id <= 2  ? <FcBusinesswoman/> : <FcBusinessman/> } </h6>
                                 </div>
                                 <div className='flex'>
                                 <CiStar className='text-[#FFD700] border-[#FFD700] ' size={30}/>
