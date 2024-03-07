@@ -95,7 +95,7 @@ function Courses() {
         {Course.map((values) => (
           <>
             <div
-              className="border rounded-[20px] w-[300px]"
+              className=" rounded-[20px] w-[300px] shadow-green-500 border border-green-500 shadow-md"
               onMouseEnter={() => handleCourseCard(values.id)}
             >
               <Image
