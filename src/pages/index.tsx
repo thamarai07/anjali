@@ -10,119 +10,114 @@ import Image from "next/image";
 import InfiniteLooper from "@/container/Infinity";
 
 export default function Home() {
-
   const CompanyLogo = [
     {
-      id : 1,
-      campany : "/company/7611770.png",
-      comapanyName :"google"
+      id: 1,
+      campany: "/company/7611770.png",
+      comapanyName: "google",
     },
     {
-      id : 2,
-      campany : "/company/CGI_Inc.-Logo.wine.png",
-      comapanyName :"CGI_Inc"
-
+      id: 2,
+      campany: "/company/CGI_Inc.-Logo.wine.png",
+      comapanyName: "CGI_Inc",
     },
     {
-      id : 3,
-      campany : "/company/cisco_logo-1000px.png",
-      comapanyName :"cisco_logo"
-
+      id: 3,
+      campany: "/company/cisco_logo-1000px.png",
+      comapanyName: "cisco_logo",
     },
     {
-      id : 4,
-      campany : "/company/Cognizant_logo_2022.svg.png",
-      comapanyName :"Cognizant_logo"
-      
+      id: 4,
+      campany: "/company/Cognizant_logo_2022.svg.png",
+      comapanyName: "Cognizant_logo",
     },
     {
-      id : 5,
-      campany : "/company/Dell_logo.png",
-      comapanyName :"Dell_logo"
-      
-    },  
-    {
-      id : 6,
-      campany : "/company/hp-logo.com.png",
-      comapanyName :"hp-logo"
-
+      id: 5,
+      campany: "/company/Dell_logo.png",
+      comapanyName: "Dell_logo",
     },
     {
-      id : 7,
-      campany : "/company/IBM_logo.svg.png",
-      comapanyName :"IBM_logo"
-
+      id: 6,
+      campany: "/company/hp-logo.com.png",
+      comapanyName: "hp-logo",
     },
     {
-      id : 8,
-      campany : "/company/Infosys_logo.svg.png",
-      comapanyName :"Infosys_logo"
+      id: 7,
+      campany: "/company/IBM_logo.svg.png",
+      comapanyName: "IBM_logo",
     },
     {
-      id : 9,
-      campany : "/company/Intel-logo-2022.png",
-      comapanyName :"Intel"
-
+      id: 8,
+      campany: "/company/Infosys_logo.svg.png",
+      comapanyName: "Infosys_logo",
     },
     {
-      id : 10,
-      campany : "/company/png-transparent-microsoft-logo-microsoft-thumbnail.png",
-      comapanyName :"microsoft"
+      id: 9,
+      campany: "/company/Intel-logo-2022.png",
+      comapanyName: "Intel",
     },
     {
-      id : 11,
-      campany : "/company/sutherland-global-services.png",
-      comapanyName :"sutherland"
-
+      id: 10,
+      campany:
+        "/company/png-transparent-microsoft-logo-microsoft-thumbnail.png",
+      comapanyName: "microsoft",
     },
     {
-      id : 12,
-      campany : "/company/Tata_Consultancy_Services_Logo.svg.png",
-      comapanyName :"Tata_Consultancy_Services_Logo"
-      
-    }
-  ]
-  
-
+      id: 11,
+      campany: "/company/sutherland-global-services.png",
+      comapanyName: "sutherland",
+    },
+    {
+      id: 12,
+      campany: "/company/Tata_Consultancy_Services_Logo.svg.png",
+      comapanyName: "Tata_Consultancy_Services_Logo",
+    },
+  ];
 
   return (
     <>
       <Head>
-        <title>Anjali Computer Education | ISO Certified</title>
-        <meta
-          name="description"
-          content="Begin your career journey with Anjali Computer Education, offering world-class training and advanced courses to help you excel in the ever-evolving tech industry."
-        />
-        <meta
-          name="keywords"
-          content="Anjali Computer Education, ISO Certified, programming courses, coding classes, software development, web development, Python, Java, C++, soft skills, communication training, leadership skills, data science, machine learning, artificial intelligence, Tally ERP 9, accounting software, hardware repair, multimedia design, graphic design, video editing, animation, IT certification, networking, cybersecurity, database management, IT project management, software engineering, job-oriented courses, industry-ready skills"
-        />
+            <title>Anjali Computer Education | ISO Certified</title>
+            <meta name="robots" content="index, follow" />
+            <meta
+              name="description"
+              content="Begin your career journey with Anjali Computer Education, offering world-class training and advanced courses to help you excel in the ever-evolving tech industry."
+            />
+            <meta
+              name="keywords"
+              content="Anjali Computer Education, ISO Certified courses, programming course, coding classes,web development,fullstack web development,soft skills, communication training,Tally courses, Tally ERP course, accounting course, hardware repair courses, multimedia design course, graphic design course, video editing course, animation course, networking course, cybersecurity course"
+            />
+            <link rel="canonical" href="https://anjalicomputereducation.com/" />
       </Head>
 
       <MainLayout>
         <div className="lg:max-w-[1200px] m-auto px-10 mt-10">
+          <h1>Make Strong Career Path with Anjali Computer Education</h1>
           <p className="text-center md:text-[45px] text-[25px] leading-relaxed  font-bold lg:mb-[100px] lg:mt-[80px] antialiased ">
-            Our Advanced Courses Can Help You Advance <span className="text-red-500 "> Your Career </span>
-          </p> 
+            Our Advanced Courses Can Help You Advance{" "}
+            <span className="text-red-500 "> Your Career </span>
+          </p>
           <HomeSlider />
         </div>
-         
-          <p className="gradient_one text-center md:text-[45px] text-[30px] font-semibold  lg:mt-[120px] mt-20 mb-[60px] antialiased  ">
-            
+        <p className="gradient_one text-center md:text-[45px] text-[30px] font-semibold  lg:mt-[120px] mt-20 mb-[60px] antialiased  ">
           Get chances to work at top companies
-          </p>
-          <div className="lg:max-w-[1200px] m-auto px-10 mt-10">
+        </p>
+        <div className="lg:max-w-[1200px] m-auto px-10 mt-10">
           {/* </div> */}
           <InfiniteLooper speed={400} direction="left">
             <div className="flex gap-24 bg-gray-100 mb-5">
-              {
-                CompanyLogo.map((values)=>(
-                  <Image alt={values.comapanyName} src={values.campany} style={{
-                    objectFit : "contain"
-                  }} width={140} className="p-4" height={40}/>      
-                ))
-              }
-                 
+              {CompanyLogo.map((values) => (
+                <Image
+                  alt={values.comapanyName}
+                  src={values.campany}
+                  style={{
+                    objectFit: "contain",
+                  }}
+                  width={140}
+                  className="p-4"
+                  height={40}
+                />
+              ))}
             </div>
           </InfiniteLooper>
           <Courses />
@@ -135,9 +130,8 @@ export default function Home() {
           </p>
           <Unic />
           <Testimonial />
-          </div>
-          </MainLayout>
-
-        </>
-)
+        </div>
+      </MainLayout>
+    </>
+  );
 }

@@ -8,6 +8,7 @@ import ScopeofCourse from "@/container/course/ScopeofCourse";
 import JobRole from "@/container/JobRole";
 import AnjaliStats from "@/container/AnjaliStats";
 import Testimonial from "@/container/Testimonial";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const paths = CourseContent.map((post) => ({
@@ -24,18 +25,25 @@ export async function getStaticProps({ params }) {
 }
 
 const Course = ({ course }) => {
+
+
+  const Router = useRouter()
   return (
     <>
       <Head>
-        <title>Anjali Computer Education | ISO Certified</title>
+        <title>{course.courseTitle + " Course in Anjalicomputereducation "} | ISO Certified</title>
+        <meta name="robots" content="index, follow" />
+
         <meta
           name="description"
-          content="Begin your career journey with Anjali Computer Education, offering world-class training and advanced courses to help you excel in the ever-evolving tech industry."
+          content={course.Slogan}
         />
         <meta
           name="keywords"
-          content="Anjali Computer Education, ISO Certified, programming courses, coding classes, software development, web development, Python, Java, C++, soft skills, communication training, leadership skills, data science, machine learning, artificial intelligence, Tally ERP 9, accounting software, hardware repair, multimedia design, graphic design, video editing, animation, IT certification, networking, cybersecurity, database management, IT project management, software engineering, job-oriented courses, industry-ready skills"
+          content={course.courseTitle + "course , tob softskill course , self development course, best course during school day's, best course during collage, it courses in chennai, accounting courses in chennai, media related courses in chennai "  }
         />
+            <link rel="canonical" href={`https://anjalicomputereducation.com`+Router.asPath} />
+
       </Head>
       <MainLayout>
         <div className="lg:max-w-[1200px] m-auto lg:px-10 ">

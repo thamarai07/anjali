@@ -44,7 +44,7 @@ const Header = () => {
                 <Image
                   src="/anjalilogo.png"
                   className="m-auto "
-                  alt=""
+                  alt="anjalicomputereducationlogo"
                   width={200}
                   height={100}
                 />
@@ -58,7 +58,7 @@ const Header = () => {
                 <Image
                   src="/anjalilogo.png"
                   className="m-auto "
-                  alt=""
+                  alt="anjalicomputereducationlogo"
                   width={200}
                   height={100}
                 />
